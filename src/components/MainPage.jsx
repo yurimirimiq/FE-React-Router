@@ -4,7 +4,7 @@ import '../styles/MainPage.css';
 const MainPage = () => {
   const navigate = useNavigate();
 
-  const colors = ['red', 'blue', 'orange', 'pink', 'yellow'];
+  const colors = ['red', 'blue', 'yellow', 'pink', 'orange'];
 
   return (
     <div className="container">
@@ -18,7 +18,7 @@ const MainPage = () => {
               backgroundColor: color,
               color: color === 'yellow' ? 'black' : 'white',
               margin: '5px',
-              padding: '10px 0px',
+              padding: '10px 40px',
               border: 'none',
               borderRadius: '5px',
               cursor: 'pointer',
