@@ -1,23 +1,34 @@
 import { useParams } from 'react-router-dom';
-import '../styles/ColorPage.css';
 
 function ColorPage() {
-  const { id } = useParams(); // URL에서 색상 이름 추출
-
-  const pageStyle = {
-    backgroundColor: id,
-    height: '200vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: '#fff',
-    fontSize: '2rem',
-    flexDirection: 'column',
-  };
+  const { id } = useParams();
 
   return (
-    <div style={pageStyle}>
-      <p>이 페이지는 <strong>{id}</strong> 색상입니다 🎨</p>
+    <div
+      style={{
+        backgroundColor: id,
+        width: '100%',
+        height: '100%',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        margin: 0,
+        padding: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <p
+        style={{
+          color: 'white',
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          margin: 0,
+        }}
+      >
+        {id} 배경 페이지입니다😃🖌️
+      </p>
     </div>
   );
 }
